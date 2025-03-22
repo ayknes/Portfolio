@@ -1,0 +1,84 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+  transition-property: opacity,background,transform,filter;
+  transition-timing-function: ease-in-out;
+  transition-duration: 500ms;
+}
+
+.page-transition{
+  opacity: 0;
+  background: #121214;
+  transform: translateY(40px);
+  filter: blur(12px);
+}
+
+.glass{
+  backdrop-filter: blur(8px) saturate(153%);
+    -webkit-backdrop-filter: blur(8px) saturate(153%);
+    background-color: rgba(255, 255, 255, 0.19);
+}
+.glass2{
+  backdrop-filter: blur(6px) saturate(180%);
+  -webkit-backdrop-filter: blur(6px) saturate(180%);
+  background-color: rgba(250, 250, 250, 0.09);
+}
+.primary-glass{
+  background-color:hsla(240,5%,7%,1);
+background-image:
+radial-gradient(at 89% 72%, hsla(240,5%,7%,1) 0px, transparent 50%),
+radial-gradient(at 20% 0%, hsla(19,93%,49%,1) 0px, transparent 50%);
+position: relative;
+}
+.primary-glass2{
+  background-color:hsla(240,5%,7%,1);
+  background-image:
+  radial-gradient(at 89% 72%, hsla(240,5%,7%,1) 0px, transparent 50%),
+  radial-gradient(at 8% 96%, hsla(19,93%,49%,1) 0px, transparent 50%);
+position: relative;
+}
+.primary-glass2::after{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(6px) saturate(180%);
+  -webkit-backdrop-filter: blur(6px) saturate(180%);
+  background-color: rgba(250, 250, 250, 0.09);
+}
+.primary-glass::after{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(6px) saturate(180%);
+  -webkit-backdrop-filter: blur(6px) saturate(180%);
+  background-color: rgba(250, 250, 250, 0.09);
+}
+.stickyheader{
+  backdrop-filter: blur(3px) saturate(180%);
+  -webkit-backdrop-filter: blur(3px) saturate(180%);
+  background-color: rgba(18, 18, 20, 0.21);
+  border: 1px solid rgba(255, 255, 255, 0.125);
+}
