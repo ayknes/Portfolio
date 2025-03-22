@@ -7,10 +7,10 @@ const Hero = () => {
                 <div className="sm:w-7/12 w-full">
                     <div className="text_container">
                         <h5 className="text-gray-400 text-md">Hey there!</h5>
-                        <h2 className="md:text-7xl text-4xl font-bold">I'm <span className="text-primarycolor">Otmane Boushaba</span>,<br /> a Backend / Data Engineer</h2>
+                        <h2 className="md:text-7xl text-4xl font-bold">I&apos;m <span className="text-primarycolor">Otmane Boushaba</span>,<br /> a Backend / Data Engineer</h2>
                         <p className="py-4 text-sm text-gray-400">Welcome to my digital portfolio, where code investigation meets creativity. 
                             I thrive on unraveling digital mysteries and understanding problems at their core. 
-                            Like a detective examining clues, I'm fascinated by dissecting challenges before crafting solutions. 
+                            Like a detective examining clues, I&apos;m fascinated by dissecting challenges before crafting solutions. 
                             My passion lies in the investigative journey—analyzing patterns, exploring possibilities, and uncovering the root causes that others might miss. 
                             I build responsive, effective web solutions not just because I can, but because I truly understand the problems they solve.</p>
                         <a href="./resume.pdf" target="_blank" className="w-fit flex"><button className="my-3 text-primarycolor px-5 py-2 border-2 text-sm transition-all duration-200 ease-in-out hover:bg-primarycolor hover:text-white bg-transparent border-primarycolor flex gap-3 justify-center items-center"> <FaDownload /> Download CV</button></a>

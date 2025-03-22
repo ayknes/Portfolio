@@ -19,7 +19,7 @@ const Services = () => {
                             <div className="w-full py-2 relative z-30">
                                 <p className='text-sm text-gray-400'>I provide full-stack web development services to create
                                     functional and visually appealing websites tailored to your
-                                    business needs. Whether it's a personal blog or a complex
+                                    business needs. Whether it&apos;s a personal blog or a complex
                                     business platform, I build websites that are fast, secure, and
                                     optimized for peak performance.</p>
                             </div>
@@ -36,10 +36,10 @@ const Services = () => {
                                 </div>
                             </div>
                             <div className="w-full py-2">
-                                <p className='text-sm text-gray-400'>Transform your brand's message with eye-catching graphics.
+                                <p className='text-sm text-gray-400'>Transform your brand&apos;s message with eye-catching graphics.
                                     From logo design to marketing materials and web graphics,
                                     I craft visuals that resonate with your target audience and
-                                    convey your brand's identity with creativity and precision.</p>
+                                    convey your brand&apos;s identity with creativity and precision.</p>
                             </div>
                         </div>
                     </div>
@@ -57,7 +57,7 @@ const Services = () => {
                                 </div>
                             </div>
                             <div className="w-full py-2">
-                                <p className='text-sm text-gray-400'>Elevate your website's presence with expert SEO strategies
+                                <p className='text-sm text-gray-400'>Elevate your website&apos;s presence with expert SEO strategies
                                     designed to improve search engine rankings, drive traffic,
                                     and increase user engagement. I provide comprehensive
                                     SEO services including keyword research, on-page optimization,
