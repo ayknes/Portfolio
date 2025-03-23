@@ -1,7 +1,6 @@
-import localFont from "next/font/local";
-import "./globals.css";
-import { Plus_Jakarta_Sans } from 'next/font/google'
 import Header from "@/components/ui/Header";
+import { Plus_Jakarta_Sans } from 'next/font/google';
+import "./globals.css";
 
 const PlusJakartaSans = Plus_Jakarta_Sans({
   subsets: ['latin'],
@@ -9,7 +8,7 @@ const PlusJakartaSans = Plus_Jakarta_Sans({
 });
 
 export const metadata = {
-  title: "Harry Kane",
+  title: "Otmane Boushaba",
   description: "a Web developer",
 };
 

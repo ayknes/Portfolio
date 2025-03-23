@@ -1,4 +1,4 @@
-import { FaDev, FaDownload, FaDribbble, FaGithub, FaLinkedin } from "react-icons/fa6";
+import { FaDownload, FaDribbble, FaGithub, FaLinkedin } from "react-icons/fa6";
 import Counter from "./Counter";
 const Hero = () => {
     return (
@@ -45,10 +45,9 @@ const Hero = () => {
                 </div>
                 <div className="md:w-5/12 w-full flex items-center py-5 justify-around bg-secondarycolor p-3 rounded-3xl border border-gray-600/[0.5] shadow-[0px_0px_0px_1px_rgba(0,0,0,0.06),0px_1px_1px_-0.5px_rgba(0,0,0,0.06),0px_3px_3px_-1.5px_rgba(0,0,0,0.06),_0px_6px_6px_-3px_rgba(0,0,0,0.06),0px_12px_12px_-6px_rgba(0,0,0,0.06),0px_24px_24px_-12px_rgba(0,0,0,0.06)]">
                     <ul className="flex justify-center items-center gap-4">
-                        <li><a href="#"><button className="w-14 h-14 rounded-full flex justify-center items-center glass border border-gray-600/[0.5] transition-all duration-200 ease-in-out hover:bg-primarycolor"><FaDribbble className="w-8 h-8" /></button></a></li>
+                        <li><a href="boushaba.org"><button className="w-14 h-14 rounded-full flex justify-center items-center glass border border-gray-600/[0.5] transition-all duration-200 ease-in-out hover:bg-primarycolor"><FaDribbble className="w-8 h-8" /></button></a></li>
                         <li><a href="https://www.linkedin.com/in/boushaba-otmane/"><button className="w-14 h-14 rounded-full flex justify-center items-center glass border border-gray-600/[0.5] transition-all duration-200 ease-in-out hover:bg-primarycolor text-3xl"><FaLinkedin /></button></a></li>
-                        <li><a href="#"><button className="w-14 h-14 rounded-full flex justify-center items-center glass border border-gray-600/[0.5] transition-all duration-200 ease-in-out hover:bg-primarycolor text-3xl"><FaGithub /></button></a></li>
-                        <li><a href="#"><button className="w-14 h-14 rounded-full flex justify-center items-center glass border border-gray-600/[0.5] transition-all duration-200 ease-in-out hover:bg-primarycolor text-3xl"><FaDev /></button></a></li>
+                        <li><a href="https://github.com/ayknes"><button className="w-14 h-14 rounded-full flex justify-center items-center glass border border-gray-600/[0.5] transition-all duration-200 ease-in-out hover:bg-primarycolor text-3xl"><FaGithub /></button></a></li>
                     </ul>
                 </div>
             </div>

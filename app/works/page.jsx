@@ -9,7 +9,7 @@ const Works = () => {
 
     const worksdata = [
         {
-            "image": "./img/pro01.png",
+            "image": "./img/tableau.png",
             "name": "Football Transfer Analytics",
             "date": "2023",
             "category": "Web Development & Data Analysis",
@@ -32,7 +32,7 @@ const Works = () => {
             "github": "https://github.com/username/football-analytics"
         },
         {
-            "image": "./img/pro02.png",
+            "image": "./img/eeg.png",
             "name": "Neural Interaction Helmet",
             "date": "2024",
             "category": "Machine Learning & BCI",
@@ -56,7 +56,7 @@ const Works = () => {
             ],
         },
         {
-            "image": "./img/pro03.png",
+            "image": "./img/eye_tracking.png",
             "name": "Cognitive Bias EyeTracking",
             "date": "2023",
             "category": "UX Research",
@@ -73,7 +73,7 @@ const Works = () => {
             "github": "https://github.com/username/eye-tracking"
           },
           {
-            "image": "./img/pro04.png",
+            "image": "./img/vr pizzeria.png",
             "name": "Pizza Tiger VR",
             "date": "2023",
             "category": "Virtual Reality",
@@ -153,7 +153,7 @@ const Works = () => {
             ],
           },
           {
-            "image": "./img/pro06.png",
+            "image": "./img/express.png",
             "name": "Beauty Store Admin Dashboard",
             "date": "2024",
             "category": "Backend Development",
@@ -169,7 +169,7 @@ const Works = () => {
             ],
           },
         {
-            "image": "./img/pro06.png",
+            "image": "./img/semsarai.png",
             "name": "Semsarai",
             "date": "2025",
             "category": "Web Development",
@@ -197,7 +197,7 @@ const Works = () => {
             ],
         },
         {
-            "image": "./img/pro06.png",
+            "image": "./img/vehicle detection.png",
             "name": "Oversized Vehicle Detection System",
             "date": "2024",
             "category": "Computer Vision & AI",
@@ -273,7 +273,7 @@ const Works = () => {
                                 className="glass2 w-full border border-gray-600/[0.5] p-3 rounded-xl cursor-pointer hover:shadow-lg transition-all duration-300"
                                 onClick={() => openProjectDetails(work)}
                             >
-                                <div className="w-full rounded-xl overflow-hidden">
+                                <div className="w-full h-52 rounded-xl overflow-hidden">
                                     <img src={work.image} alt={work.name} className="w-full h-full object-cover" />
                                 </div>
                                 <div className="w-full flex py-2 items-center justify-between">
