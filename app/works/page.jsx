@@ -29,7 +29,8 @@ const Works = () => {
                 "Data Preparation: Merged tables and added geospatial coordinates using Geopy library",
                 "Visualization: Created interactive Tableau dashboards showing transfer flows and financial analytics"
             ],
-            "github": "https://github.com/username/football-analytics"
+            "github": "https://github.com/username/football-analytics",
+            "starred": true
         },
         {
             "image": "./img/eeg.png",
@@ -54,6 +55,7 @@ const Works = () => {
                 "Neural network training and evaluation",
                 "Interactive application development for real-time testing"
             ],
+            "starred": true
         },
         {
             "image": "./img/eye_tracking.png",
@@ -70,7 +72,8 @@ const Works = () => {
               "Real-time gaze pattern visualization",
               "Visual behavior prediction algorithms"
             ],
-            "github": "https://github.com/username/eye-tracking"
+            "github": "https://github.com/username/eye-tracking",
+            "starred": false
           },
           {
             "image": "./img/vr pizzeria.png",
@@ -87,6 +90,7 @@ const Works = () => {
               "Cross-platform VR compatibility",
               "Progressive Web App support"
             ],
+            "starred": false
           },
           {
             "image": "./img/pro04.png",
@@ -103,6 +107,7 @@ const Works = () => {
               "Responsive animation system",
               "Cross-platform AR compatibility"
             ],
+            "starred": false
           },
           {
             "image": "./img/pro05.png",
@@ -119,6 +124,7 @@ const Works = () => {
               "User-friendly navigation system",
               "Admin panel for game inventory management"
             ],
+            "starred": false
           },
           {
             "image": "./img/pro06.png",
@@ -135,6 +141,7 @@ const Works = () => {
               "Intuitive user interface for seamless browsing",
               "Offline access to saved recipes"
             ],
+            "starred": false
           },
           {
             "image": "./img/pro06.png",
@@ -151,6 +158,7 @@ const Works = () => {
               "Instant responses with formatted data presentation",
               "Extensible architecture for adding new API services"
             ],
+            "starred": false
           },
           {
             "image": "./img/express.png",
@@ -167,6 +175,7 @@ const Works = () => {
               "Product recipe database and management",
               "Customer analytics and segmentation tools"
             ],
+            "starred": true
           },
         {
             "image": "./img/semsarai.png",
@@ -181,6 +190,7 @@ const Works = () => {
                 "Paper recommendation system",
                 "Research topic clustering"
             ],
+            "starred": true
         },
         {
             "image": "./img/pro06.png",
@@ -195,6 +205,7 @@ const Works = () => {
                 "Collaborative filtering for recommendations",
                 "Scheduled playlist updates"
             ],
+            "starred": false
         },
         {
             "image": "./img/vehicle detection.png",
@@ -212,6 +223,7 @@ const Works = () => {
               "Speed estimation through temporal vehicle position analysis",
               "Non-Maximum Suppression for reducing multiple detections"
             ],
+            "starred": true
           },
           {
             "image": "./img/pro06.png",
@@ -229,11 +241,17 @@ const Works = () => {
               "Responsive layouts for all device types",
               "Visual design aligned with URSSAF brand guidelines"
             ],
+            "starred": false
           }
     ];
 
-    // Sort works by date (most recent first)
+    // Sort works: first by starred (true first), then by date (most recent first)
     const sortedWorks = [...worksdata].sort((a, b) => {
+        // First sort by starred status
+        if (a.starred && !b.starred) return -1;
+        if (!a.starred && b.starred) return 1;
+        
+        // Then sort by date (most recent first)
         return parseInt(b.date) - parseInt(a.date);
     });
 
@@ -273,12 +291,28 @@ const Works = () => {
                                 className="glass2 w-full border border-gray-600/[0.5] p-3 rounded-xl cursor-pointer hover:shadow-lg transition-all duration-300"
                                 onClick={() => openProjectDetails(work)}
                             >
-                                <div className="w-full h-52 rounded-xl overflow-hidden">
+                                <div className="w-full h-52 rounded-xl overflow-hidden relative">
                                     <img src={work.image} alt={work.name} className="w-full h-full object-cover" />
+                                    {work.starred && (
+                                        <div className="absolute top-2 right-2 text-yellow-400">
+                                            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" viewBox="0 0 20 20" fill="currentColor">
+                                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                            </svg>
+                                        </div>
+                                    )}
                                 </div>
                                 <div className="w-full flex py-2 items-center justify-between">
                                     <div className="flex-1">
-                                        <h3 className="font-bold text-xl">{work.name}</h3>
+                                        <div className="flex items-center">
+                                            <h3 className="font-bold text-xl">{work.name}</h3>
+                                            {work.starred && (
+                                                <span className="ml-2 text-yellow-400">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+                                                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                                    </svg>
+                                                </span>
+                                            )}
+                                        </div>
                                         <p className="text-sm text-gray-400">{work.category}</p>
                                         <p className="text-xs text-gray-500 mt-1">
                                             {formatTechnologies(work.technologies)}
@@ -302,7 +336,16 @@ const Works = () => {
                         onClick={e => e.stopPropagation()} // Prevent clicks inside from closing
                     >
                         <div className="flex justify-between items-start mb-4">
-                            <h2 className="text-2xl font-bold">{selectedProject.name}</h2>
+                            <div className="flex items-center">
+                                <h2 className="text-2xl font-bold">{selectedProject.name}</h2>
+                                {selectedProject.starred && (
+                                    <span className="ml-2 text-yellow-400">
+                                        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                        </svg>
+                                    </span>
+                                )}
+                            </div>
                             <button 
                                 onClick={closeModal}
                                 className="text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200"
