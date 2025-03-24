@@ -190,7 +190,7 @@ const Contact = () => {
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                             </svg>
                             <h4 className="text-xl font-semibold mt-4">Message Sent!</h4>
-                            <p className="mt-2">Thank you for reaching out. I'll get back to you as soon as possible.</p>
+                            <p className="mt-2">Thank you for reaching out. I&apos;ll get back to you as soon as possible.</p>
                             <button 
                                 onClick={() => setSent(false)} 
                                 className="mt-4 px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors"
