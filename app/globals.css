@@ -18,16 +18,13 @@ body {
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
-  transition-property: opacity,background,transform,filter;
-  transition-timing-function: ease-in-out;
-  transition-duration: 500ms;
+  transition: all 0.3s ease-in-out;
 }
 
-.page-transition{
+.page-transition {
   opacity: 0;
-  background: #121214;
-  transform: translateY(40px);
-  filter: blur(12px);
+  transform: translateY(20px);
+  pointer-events: none;
 }
 
 .glass{

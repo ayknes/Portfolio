@@ -30,7 +30,7 @@ const Works = () => {
                 "Visualization: Created interactive Tableau dashboards showing transfer flows and financial analytics"
             ],
             "github": "https://github.com/username/football-analytics",
-            "starred": true
+            "starred": false
         },
         {
             "image": "./img/eeg.png",
@@ -55,7 +55,7 @@ const Works = () => {
                 "Neural network training and evaluation",
                 "Interactive application development for real-time testing"
             ],
-            "starred": true
+            "starred": false
         },
         {
             "image": "./img/eye_tracking.png",
@@ -175,7 +175,7 @@ const Works = () => {
               "Product recipe database and management",
               "Customer analytics and segmentation tools"
             ],
-            "starred": true
+            "starred": false
           },
         {
             "image": "./img/semsarai.png",
@@ -190,7 +190,7 @@ const Works = () => {
                 "Paper recommendation system",
                 "Research topic clustering"
             ],
-            "starred": true
+            "starred": false
         },
         {
             "image": "./img/pro06.png",
@@ -223,7 +223,7 @@ const Works = () => {
               "Speed estimation through temporal vehicle position analysis",
               "Non-Maximum Suppression for reducing multiple detections"
             ],
-            "starred": true
+            "starred": false
           },
           {
             "image": "./img/pro06.png",
@@ -245,7 +245,7 @@ const Works = () => {
           }
     ];
 
-    // Sort works: first by starred (true first), then by date (most recent first)
+    // Sort works: first by starred (false first), then by date (most recent first)
     const sortedWorks = [...worksdata].sort((a, b) => {
         // First sort by starred status
         if (a.starred && !b.starred) return -1;
@@ -267,7 +267,7 @@ const Works = () => {
     // Function to open modal with project details
     const openProjectDetails = (project) => {
         setSelectedProject(project);
-        setIsModalOpen(true);
+        setIsModalOpen(false);
     };
 
     // Function to close modal
