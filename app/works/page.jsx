@@ -266,15 +266,20 @@ const Works = () => {
 
     // Function to open modal with project details
     const openProjectDetails = (project) => {
+        console.log('Opening project:', project.name);
         setSelectedProject(project);
-        setIsModalOpen(false);
+        setIsModalOpen(true);
+        console.log('Modal open:', isModalOpen);
     };
 
     // Function to close modal
     const closeModal = () => {
+        console.log('Closing modal');
         setIsModalOpen(false);
-        // Optional: add a small delay before clearing the selected project
-        setTimeout(() => setSelectedProject(null), 300);
+        setTimeout(() => {
+            setSelectedProject(null);
+            console.log('Selected project cleared');
+        }, 300);
     };
 
     return (
